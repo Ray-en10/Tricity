@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { Bell, ExternalLink, LogOut } from 'lucide-react';
 import { API_URL, WEB_APP_URL, VARIANT_LABEL } from '../config';

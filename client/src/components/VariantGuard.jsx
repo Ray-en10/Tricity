@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL, IS_MOBILE, VARIANT_METER_TYPE, VARIANT_LABEL } from '../config';
 import { useAuth } from '../context/AuthContext';

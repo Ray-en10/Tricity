@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { 
   LayoutDashboard, 
   Zap, 
@@ -7,7 +7,6 @@ import {
   Bell, 
   FileText, 
   Settings, 
-  ArrowUpRight, 
   Plus,
   User,
   LogOut,
@@ -48,7 +47,7 @@ export default function DashboardView() {
   // Nombre de notifications non lues, affiché en badge sur « Alertes » (§8).
   const [unreadCount, setUnreadCount] = useState(0);
 
-  const refreshUnread = React.useCallback(() => {
+  const refreshUnread = useCallback(() => {
     axios.get(`${API_URL}/alerts/unread-count`)
       .then((res) => setUnreadCount(res.data.count))
       .catch(() => {});
@@ -317,21 +316,6 @@ function Overview({ stats }) {
   );
 }
 
-function StatCard({ label, value, trend, icon, trendType }) {
-  return (
-    <div className="stat-card">
-      <div className="stat-header">
-        <div className="stat-icon-wrapper">{icon}</div>
-        <div className={`stat-trend ${trendType === 'up' ? 'trend-up' : 'trend-down'}`}>
-          {trend}
-        </div>
-      </div>
-      <div className="stat-value">{value}</div>
-      <div className="stat-label">{label}</div>
-    </div>
-  );
-}
-
 // Module Views (Placeholders that we will expand)
 
 function Consommation() {
@@ -364,16 +348,16 @@ function Appareils() {
         icon: 'Smartphone'
     });
     
+    const fetchDevices = () => {
+        axios.get(`${API_URL}/devices`).then(res => setDevices(res.data));
+    };
+
     useEffect(() => {
         fetchDevices();
         if (user.role === 'admin') {
             axios.get(`${API_URL}/auth/users`).then(res => setUsers(res.data));
         }
     }, []);
-
-    const fetchDevices = () => {
-        axios.get(`${API_URL}/devices`).then(res => setDevices(res.data));
-    };
 
     const toggleDevice = (id) => {
         axios.patch(`${API_URL}/devices/${id}/toggle`).then(res => {
@@ -596,10 +580,6 @@ function Paliers() {
     const { user } = useAuth();
     const [formData, setFormData] = useState({ label: '', min: 0, max: '', price: '', usageType: 'domestic', counterPower: '6 kVA' });
     
-    useEffect(() => {
-        fetchTiers();
-    }, [filters, user]);
-
     const fetchTiers = () => {
         axios.get(`${API_URL}/tiers`).then(res => {
             // For admin, we show filtered results. For client, the backend already filtered.
@@ -610,6 +590,10 @@ function Paliers() {
             setTiers(filtered);
         });
     };
+
+    useEffect(() => {
+        fetchTiers();
+    }, [filters, user]);
 
     const handleEdit = (tier) => {
         setEditingTier(tier);
@@ -737,7 +721,7 @@ function Paliers() {
 function AlertList({ limit, onChange }) {
     const [alerts, setAlerts] = useState([]);
 
-    const load = React.useCallback(() => {
+    const load = useCallback(() => {
         axios.get(`${API_URL}/alerts`).then(res => {
             setAlerts(limit ? res.data.slice(0, limit) : res.data);
         });

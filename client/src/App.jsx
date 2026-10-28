@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import AuthView from './views/AuthView';
 import DashboardView from './views/DashboardView';
