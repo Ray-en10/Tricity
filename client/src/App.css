@@ -1,0 +1,539 @@
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.location-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.location-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.location-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.change-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.date-picker {
+  background-color: var(--card-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.export-btn {
+  background-color: var(--card-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info p {
+  line-height: 1.2;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Tier Panel */
+.tier-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tier-gauge {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 8px solid var(--border-color);
+  border-top-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gauge-value h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.gauge-value p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-yellow {
+  background-color: rgba(255, 159, 41, 0.2);
+  color: var(--secondary-color);
+}
+
+.tier-table {
+  flex-grow: 1;
+}
+
+.tier-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.tier-row.active {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.tier-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.text-orange { color: var(--secondary-color); }
+.text-red { color: var(--error-color); }
+
+/* Usage List */
+.usage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.usage-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.usage-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.usage-label {
+  font-size: 0.9rem;
+}
+
+.usage-values {
+  text-align: right;
+}
+
+.usage-val {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 0.75rem;
+}
+
+.usage-pct {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Alert List */
+.alert-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.alert-item.warning .alert-dot { background-color: var(--secondary-color); }
+.alert-item.info .alert-dot { background-color: #4A90E2; }
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.alert-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.alert-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.alert-msg {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.see-all {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.prediction-chart-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.prediction-chart-container > div:first-child {
+    flex: 1;
+}
+
+.prediction-summary {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pred-item .pred-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.pred-item .pred-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.pred-msg {
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    color: var(--error-color);
+}
+
+.pred-msg span {
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.pred-msg p {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+}
+
+/* === Phase 3 : conformité UI (couleurs, Harmoniques, drill-down) === */
+
+.text-green { color: var(--primary-color); }
+
+.badge-green { background-color: rgba(60, 207, 78, 0.2); color: var(--primary-color); }
+.badge-red { background-color: rgba(255, 77, 77, 0.2); color: var(--error-color); }
+.badge-muted { background-color: rgba(255, 255, 255, 0.08); color: var(--text-muted); }
+
+/* Indicateur journée (§4.1) */
+.day-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.day-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.day-circle-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.day-circle-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.day-detail p {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.delta-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.delta-vert { color: var(--primary-color); }
+.delta-jaune { color: #F2C94C; }
+.delta-orange { color: var(--secondary-color); }
+.delta-rouge { color: var(--error-color); }
+
+/* Cycle STEG (§6.2, §6.4) */
+.cycle-range { margin-bottom: 0.75rem; }
+
+.cycle-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.cycle-gauge .gauge-value {
+  border: 2px solid var(--text-muted);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  min-width: 140px;
+}
+
+.cycle-info p { margin-bottom: 0.4rem; font-size: 0.9rem; }
+
+.cycle-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.cycle-footer p { margin-bottom: 0.25rem; }
+
+/* Carte Harmoniques (§2.3) */
+.harmoniques-card { margin-top: 1.5rem; }
+
+.harmoniques-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.phase-col {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.phase-name { font-weight: 700; margin-bottom: 0.25rem; }
+.phase-load { font-size: 1.1rem; }
+.phase-thd { font-size: 0.75rem; }
+
+/* Répartition par disjoncteur (§2.3, §4.2) */
+.circuit-breakdown { margin-top: 1.5rem; }
+
+.meter-block { margin-bottom: 1.25rem; }
+
+.meter-label { font-weight: 600; margin-bottom: 0.6rem; }
+
+.circuits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.circuit-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  padding: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-main);
+  font-family: inherit;
+}
+
+.circuit-card:hover { border-color: var(--primary-color); }
+
+.circuit-card-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.circuit-card-objective { font-size: 0.85rem; margin-bottom: 0.3rem; }
+.circuit-card-hint { font-size: 0.75rem; }
+
+/* Drill-down historique (§4.2) */
+.circuit-history-modal { width: 100%; max-width: 640px; }
+
+.granularity-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.granularity-tab {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.granularity-tab.active {
+  background: var(--primary-color);
+  color: #0B111B;
+  border-color: var(--primary-color);
+}
+
+.history-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  height: 180px;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.history-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+  min-width: 18px;
+  height: 100%;
+}
+
+.history-bar-track {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.history-bar-fill {
+  width: 100%;
+  border-radius: 0.2rem 0.2rem 0 0;
+  transition: height 0.2s ease;
+}
+
+.history-bar-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* === Phases 4-5 : notifications, réseau multi-sites, variantes mobiles === */
+
+.nav-item { position: relative; }
+.nav-badge {
+  margin-left: auto;
+  min-width: 20px;
+  padding: 0 6px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--error-color);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-item { cursor: pointer; }
+.alert-item.unread .alert-title { font-weight: 700; }
+.alert-item.unread { background: rgba(255, 255, 255, 0.04); }
+
+/* Dashboard réseau (§8bis) */
+.sites-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.sites-table th, .sites-table td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--border-color); }
+.sites-table th { color: var(--text-muted); font-weight: 500; font-size: 0.8rem; }
+.sites-table tbody tr { cursor: pointer; }
+.sites-table tbody tr:hover { background: rgba(255, 255, 255, 0.04); }
+.sites-table tr.site-failing td:first-child { border-left: 3px solid var(--error-color); }
+.sites-table tr.selected { background: rgba(60, 207, 78, 0.08); }
+.site-detail { margin-top: 1.5rem; }
+.site-detail-grid p { margin-bottom: 0.4rem; }
+
+/* Écran mobile du responsable réseau : notifications uniquement (§9) */
+.notif-only { max-width: 560px; margin: 0 auto; padding: 1rem; }
+.notif-only-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.open-web-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1rem; }
+
+/* Mauvaise application mobile (mono/tri) */
+.wrong-app { max-width: 420px; margin: 4rem auto; padding: 1.5rem; text-align: center; }
+.wrong-app p { margin: 0.75rem 0; color: var(--text-muted); }

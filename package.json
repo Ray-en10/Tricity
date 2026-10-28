@@ -1,0 +1,14 @@
+{
+  "name": "watt-plus",
+  "version": "1.0.0",
+  "description": "WATT+ Electricity Monitoring Platform",
+  "scripts": {
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "cd server && node seed.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

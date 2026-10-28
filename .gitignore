@@ -1,0 +1,26 @@
+# Dépendances
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Secrets - ne jamais committer
+.env
+.env.local
+.env.*.local
+server/.env
+
+# Build
+client/dist/
+client/dist-mobile-*/
+client/build/
+client/capacitor.config.json
+client/android/
+client/ios/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
