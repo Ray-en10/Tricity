@@ -9,6 +9,7 @@
     "seed": "cd server && node seed.js"
   },
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "mongodb": "^7.7.0"
   }
 }

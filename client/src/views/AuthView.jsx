@@ -194,7 +194,7 @@ export default function AuthView() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <button
                 type="button"
-                onClick={() => setFormData(prev => ({ ...prev, email: 'admin@watt.tn', password: 'adminpassword123' }))}
+                onClick={() => setFormData(prev => ({ ...prev, email: 'admin@watt.tn', password: 'admin' }))}
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid var(--border-color)',
@@ -217,7 +217,7 @@ export default function AuthView() {
               </button>
               <button
                 type="button"
-                onClick={() => setFormData(prev => ({ ...prev, email: 'amine@gmail.com', password: 'aminepassword123' }))}
+                onClick={() => setFormData(prev => ({ ...prev, email: 'rayen@gmail.com', password: 'rayen' }))}
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid var(--border-color)',
@@ -235,7 +235,7 @@ export default function AuthView() {
                 onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
                 onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'}
               >
-                <span>👤 <strong>Client :</strong> amine@gmail.com</span>
+                <span>👤 <strong>Client :</strong> rayen@gmail.com</span>
                 <span style={{ color: 'var(--primary-color)', fontSize: '0.75rem', fontWeight: 600 }}>Remplir ➔</span>
               </button>
             </div>
